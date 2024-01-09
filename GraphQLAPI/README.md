@@ -1,11 +1,11 @@
-# GraphQL 
+# GraphQL
 
 ## Production environment
 
-1. To disable 
+1. To disable
    1. Introspection
    2. Playground
-   
+
 Add the following code in the `package.json` file
 
 ```
@@ -20,7 +20,7 @@ Add the following code in the `package.json` file
 
 or
 
-you can add the settings in 
+you can add the settings in
 
 ```Javascript
 const server = new ApolloServer({

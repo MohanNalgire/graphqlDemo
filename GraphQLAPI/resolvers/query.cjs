@@ -1,14 +1,10 @@
 module.exports = {
-    sessions :(parent, args, {dataSources}, info)=> {
-        return dataSources.sessionAPI.getSessions(args);
-    },
-    sessionById:(parent,{id}, {dataSources}, info)=> {
-        return dataSources.sessionAPI.getSessionById(id);
-    },
-    speakers:(parent, args,{dataSources}, info)=>{
-        return dataSources.speakerAPI.getSpeakers(args);
-    },
-    speakerById:(parent,{id}, {dataSources}, info)=>{
-        return dataSources.speakerAPI.getSpeakerById(id);
-    }
+  sessions: (_parent, args, { dataSources }, _info) =>
+    dataSources.sessionAPI.getSessions(args),
+  sessionById: (_parent, { id }, { dataSources }, _info) =>
+    dataSources.sessionAPI.getSessionById(id),
+  speakers: (_parent, args, { dataSources }, _info) =>
+    dataSources.speakerAPI.getSpeakers(args),
+  speakerById: (_parent, { id }, { dataSources }, _info) =>
+    dataSources.speakerAPI.getSpeakerById(id),
 };
