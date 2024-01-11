@@ -6,6 +6,11 @@ const resolvers = {
   Mutation,
   Query,
   Session,
+  Room: {
+    EUROPA: 'Europa',
+    SOL: 'Sol',
+    SATURN: 'Saturn',
+  },
 };
 
 module.exports = resolvers;

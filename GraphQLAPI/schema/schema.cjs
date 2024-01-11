@@ -1,6 +1,12 @@
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
+  enum Room {
+    EUROPA
+    SOL
+    SATURN
+  }
+
   type Mutation {
     toggleFavoriteSession(id: ID): Session
     addNewSession(session: SessionInput): Session
@@ -11,7 +17,7 @@ const typeDefs = gql`
     description: String
     startsAt: String
     endsAt: String
-    room: String
+    room: Room
     day: String
     format: String
     track: String
@@ -26,7 +32,7 @@ const typeDefs = gql`
       description: String
       statsAt: String
       endsAt: String
-      room: String
+      room: Room
       day: String
       format: String
       track: String
@@ -42,7 +48,7 @@ const typeDefs = gql`
     description: String
     statsAt: String
     endsAt: String
-    room: String
+    room: Room
     day: String
     format: String
     track: String @deprecated(reason: "not used now")

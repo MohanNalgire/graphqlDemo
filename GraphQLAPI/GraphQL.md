@@ -69,3 +69,14 @@ mutation {
   }
 }
 ```
+
+## Enum 
+
+```
+query{
+  sessions(room: Europa) {
+    title,
+    room
+  }
+}
+```
